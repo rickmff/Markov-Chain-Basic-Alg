@@ -13,7 +13,7 @@ npm install
 ```bash 
 node ./dist/index.js
 ```
-#### ...Take a coffee and wait 82.3 long seconds...
+#### ...Take a coffee and wait 82.3 long seconds
 ```bash 
 node ./dist/nextWord.js
 ```
