@@ -7,10 +7,10 @@ interface WordMapData {
 
 
 function getBody(line: string) {
-	const [_rating, _title, body] = line.split(",");
+  const [_rating, _title, body] = line.split(",");
 	return body;
 }
-
+console.time("getData")
 function getData(): string[] {
 	const dataSetData = readFileSync("./data/test.csv", { encoding: "utf-8" });
 	const lines = dataSetData.split("\n").map(getBody);
@@ -19,9 +19,10 @@ function getData(): string[] {
 }
 
 const lines = getData();
+console.timeEnd("getData")
 
+console.time("wordMap")
 const wordMap = new Map<string, WordMapData>();
-console.time("loaded-1")
 for (let line of lines) {
   if (!line) continue;
   const cleanedBody = line.replace(/[^a-zA-Z]+/g, " ").replace(/\s+/g, " ");
@@ -48,9 +49,11 @@ for (let line of lines) {
     }
   }
 }
-console.timeEnd("loaded")
+console.timeEnd("wordMap")
+
 console.time("write");
 writeFileSync(
   "./results/probability.json",
   JSON.stringify(Object.fromEntries(wordMap))
 );
+console.timeEnd("write");

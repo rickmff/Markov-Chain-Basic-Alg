@@ -6,14 +6,16 @@ function getBody(line) {
     const [_rating, _title, body] = line.split(",");
     return body;
 }
+console.time("getData");
 function getData() {
     const dataSetData = (0, fs_1.readFileSync)("./data/test.csv", { encoding: "utf-8" });
     const lines = dataSetData.split("\n").map(getBody);
     return lines;
 }
 const lines = getData();
+console.timeEnd("getData");
+console.time("wordMap");
 const wordMap = new Map();
-console.time("loaded-1");
 for (let line of lines) {
     if (!line)
         continue;
@@ -39,6 +41,7 @@ for (let line of lines) {
         }
     }
 }
-console.timeEnd("loaded");
+console.timeEnd("wordMap");
 console.time("write");
 (0, fs_2.writeFileSync)("./results/probability.json", JSON.stringify(Object.fromEntries(wordMap)));
+console.timeEnd("write");

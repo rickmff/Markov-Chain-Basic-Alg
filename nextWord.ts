@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from "fs";
 
+console.time("read");
 const data = JSON.parse(
   readFileSync("./results/probability.json", { encoding: "utf-8" })
 );
@@ -14,8 +15,11 @@ for (const [word, data] of entries) {
   const mostCommon = Object.entries(nextWords).sort((a, b) => b[1] - a[1])[0];
   map.set(word, mostCommon[0]);
 }
+console.timeEnd("read");
 
+console.time("write");
 writeFileSync(
   "./results/nextWord.json",
   JSON.stringify(Object.fromEntries([...map]))
 );
+console.timeEnd("write");
