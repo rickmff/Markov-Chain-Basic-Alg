@@ -6,8 +6,8 @@
 
 ##### - https://drive.google.com/file/d/14fxH0lNMwYKPA1gXb0PuAnRciZDI8Ikb/view?usp=sharing
 
-#### ```bash npm install```
-#### ```bash ./dist/index.js```
-#### Take a coffee and wait...
-#### ```bash ./dist/nextWord.js```
+```bash npm install```
+```bash ./dist/index.js```
+#### Take a coffee and wait 82.3 long seconds...
+```bash ./dist/nextWord.js```
 #### Admire the /results files.
