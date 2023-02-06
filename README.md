@@ -2,7 +2,7 @@
 
 ###### A Markov chain is a mathematical model used to predict future states of a system based on its current state and the probability of transition between states. In other words, it's a way of modeling how a system will evolve over time based on the likelihood of its states changing. The key idea is that the future state of the system only depends on its current state and not on its past states. This concept is used in various fields, including economics, finance, and computer science.
 
-![alt text](![image](https://user-images.githubusercontent.com/46444941/217041670-8ddce907-e5f4-4461-9357-e9b965c42ce0.png))
+![image](https://user-images.githubusercontent.com/46444941/217041770-ce21bddf-942c-440d-b053-a6580efb6629.png)
 
 ##### Sugestion of DataSet just put this in /data 
 
