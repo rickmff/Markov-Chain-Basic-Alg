@@ -13,6 +13,7 @@ function getData() {
 }
 const lines = getData();
 const wordMap = new Map();
+console.time("loaded-1");
 for (let line of lines) {
     if (!line)
         continue;
@@ -38,4 +39,6 @@ for (let line of lines) {
         }
     }
 }
+console.timeEnd("loaded");
+console.time("write");
 (0, fs_2.writeFileSync)("./results/probability.json", JSON.stringify(Object.fromEntries(wordMap)));
