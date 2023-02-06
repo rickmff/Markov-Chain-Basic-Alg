@@ -9,7 +9,12 @@
 ```bash 
 npm install
 ```
-```bash ./dist/index.js```
-#### Take a coffee and wait 82.3 long seconds...
-```bash ./dist/nextWord.js```
+#### Run...
+```bash 
+node ./dist/index.js
+```
+#### ...Take a coffee and wait 82.3 long seconds...
+```bash 
+node ./dist/nextWord.js
+```
 #### Admire the /results files.
