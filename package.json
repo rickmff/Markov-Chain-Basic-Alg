@@ -1,0 +1,13 @@
+{
+  "name": "MarkovChain-Test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.19",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
